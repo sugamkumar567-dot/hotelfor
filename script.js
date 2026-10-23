@@ -1,5 +1,4 @@
-// Replace this with the hotel's real booking email before publishing.
-const HOTEL_BOOKING_EMAIL = "hotel@example.com";
+const HOTEL_BOOKING_EMAIL = "reservations@sugamhotels.com";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -9,6 +8,7 @@ const today = new Date();
 const todayISO = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 checkin.min = todayISO;
 checkout.min = todayISO;
+
 checkin.addEventListener("change", () => {
   checkout.min = checkin.value || todayISO;
   if (checkout.value && checkin.value && checkout.value <= checkin.value) {
@@ -19,13 +19,17 @@ checkin.addEventListener("change", () => {
 document.getElementById("booking-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
-  const name = form.get("name");
-  const checkIn = form.get("checkin");
-  const checkOut = form.get("checkout");
-  if (checkOut <= checkIn) {
+  const name = String(form.get("name") || "").trim();
+  const checkIn = String(form.get("checkin") || "");
+  const checkOut = String(form.get("checkout") || "");
+  const checkInDate = new Date(checkIn + "T00:00:00");
+  const checkOutDate = new Date(checkOut + "T00:00:00");
+
+  if (!checkIn || !checkOut || checkOutDate <= checkInDate) {
     document.getElementById("form-status").textContent = "Check-out date must be after check-in date.";
     return;
   }
+
   const subject = encodeURIComponent("Hotel booking enquiry - " + name);
   const body = encodeURIComponent(
     "Booking enquiry\n\nName: " + name +
