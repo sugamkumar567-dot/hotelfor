@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hotel rooms, amenities, photos and booking enquiries.">
+  <title>YOUR HOTEL NAME | Hotel & Stay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">✦</span><span><strong>YOUR HOTEL NAME</strong><small>HOTEL & STAY</small></span></a>
+  <nav><a href="#rooms">Rooms</a><a href="#amenities">Amenities</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+  <a class="nav-cta" href="#booking">Book a stay</a>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO YOUR HOME AWAY FROM HOME</p>
+    <h1>Comfort, care &<br><span>memorable stays.</span></h1>
+    <p class="hero-copy">Discover a relaxing stay, thoughtfully designed rooms and warm hospitality. Replace this text with your hotel's real highlights.</p>
+    <div class="hero-actions"><a class="button gold" href="#booking">Enquire about a stay</a><a class="button outline" href="#rooms">Explore rooms</a></div>
+    <div class="quick-points"><span>✦ Comfortable rooms</span><span>✦ Friendly service</span><span>✦ Convenient location</span></div>
+  </div>
+</section>
+
+<section class="trust-strip" id="amenities">
+  <div><b>▣</b><strong>Comfortable rooms</strong><small>Relax and recharge</small></div>
+  <div><b>♨</b><strong>Dining options</strong><small>Update with real facilities</small></div>
+  <div><b>⌁</b><strong>Free Wi-Fi</strong><small>Confirm availability</small></div>
+  <div><b>⌖</b><strong>Great location</strong><small>Add your address below</small></div>
+</section>
+
+<section class="section rooms-section" id="rooms">
+  <div class="section-title"><p class="eyebrow">STAY YOUR WAY</p><h2>Rooms & accommodation</h2><p>Add your actual room types, prices, occupancy and photos before publishing.</p></div>
+  <div class="room-grid">
+    <article class="room-card"><div class="room-photo photo-one" role="img" aria-label="Hotel bedroom"></div><div class="room-info"><div class="room-heading"><h3>Deluxe Room</h3><span>From ₹ PRICE</span></div><p>Comfortable stay with modern essentials. Replace with the room's actual features.</p><div class="room-meta">1 room · Guest capacity: update</div><a href="#booking" class="text-link">Enquire about this room →</a></div></article>
+    <article class="room-card"><div class="room-photo photo-two" role="img" aria-label="Hotel twin bedroom"></div><div class="room-info"><div class="room-heading"><h3>Standard Room</h3><span>From ₹ PRICE</span></div><p>A welcoming room for short visits and longer stays. Update details as needed.</p><div class="room-meta">1 room · Guest capacity: update</div><a href="#booking" class="text-link">Enquire about this room →</a></div></article>
+    <article class="room-card"><div class="room-photo photo-three" role="img" aria-label="Hotel suite sitting area"></div><div class="room-info"><div class="room-heading"><h3>Family / Suite</h3><span>From ₹ PRICE</span></div><p>Room description, bed type and included amenities go here.</p><div class="room-meta">Room size · Guest capacity: update</div><a href="#booking" class="text-link">Enquire about this room →</a></div></article>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="section-title"><p class="eyebrow">A LOOK AROUND</p><h2>Hotel gallery</h2><p>Replace demo photos with your own hotel's real photos.</p></div>
+  <div class="gallery-grid"><div class="gallery-tile g1">Exterior & entrance</div><div class="gallery-tile g2">Guest rooms</div><div class="gallery-tile g3">Dining & lounge</div><div class="gallery-tile g4">Facilities</div></div>
+</section>
+
+<section class="booking-wrap" id="booking">
+  <div class="booking-copy"><p class="eyebrow">PLAN YOUR VISIT</p><h2>Request a booking</h2><p>Send an enquiry directly to the hotel. This starter form opens your email app; it does not confirm a reservation or check live room availability.</p><ul><li>Choose dates and room type</li><li>Share guest details</li><li>Hotel team confirms availability</li></ul></div>
+  <form id="booking-form" class="booking-form">
+    <label>Full name<input name="name" required placeholder="Your name"></label>
+    <div class="form-row"><label>Check-in<input name="checkin" type="date" required></label><label>Check-out<input name="checkout" type="date" required></label></div>
+    <div class="form-row"><label>Adults<select name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label><label>Children<select name="children"><option selected>0</option><option>1</option><option>2</option><option>3+</option></select></label></div>
+    <label>Room type<select name="room"><option>Deluxe Room</option><option>Standard Room</option><option>Family / Suite</option><option>Not sure yet</option></select></label>
+    <label>Email or phone<input name="contact" required placeholder="How can we contact you?"></label>
+    <button class="button gold full" type="submit">Send booking enquiry</button>
+    <p class="form-note">Demo email: update the hotel contact in <code>script.js</code> before going live.</p>
+    <p id="form-status" class="form-status" role="status"></p>
+  </form>
+</section>
+
+<section class="contact-section" id="contact">
+  <div><p class="eyebrow">GET IN TOUCH</p><h2>We'd love to welcome you.</h2><p>Replace the sample details below with verified hotel information.</p></div>
+  <div class="contact-cards">
+    <div><span>☎</span><small>Call us</small><strong>+91 XXXXX XXXXX</strong><a href="tel:+91XXXXXXXXXX">Tap to call (update number)</a></div>
+    <div><span>✉</span><small>Email</small><strong>hotel@example.com</strong><a href="mailto:hotel@example.com">Send an email</a></div>
+    <div><span>⌖</span><small>Find us</small><strong>Hotel address, City, State</strong><a href="https://maps.google.com/" target="_blank" rel="noopener">Open Google Maps</a></div>
+    <div><span>◉</span><small>WhatsApp</small><strong>Hotel WhatsApp</strong><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">Message us (update number)</a></div>
+  </div>
+</section>
+</main>
+<footer><a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span><strong>YOUR HOTEL NAME</strong><small>HOTEL & STAY</small></span></a><div class="footer-links"><a href="#rooms">Rooms</a><a href="#amenities">Amenities</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><p>© <span id="year"></span> YOUR HOTEL NAME. All rights reserved.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
