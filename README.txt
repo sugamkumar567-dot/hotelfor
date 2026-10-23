@@ -7,7 +7,7 @@ Included:
 - hotel-hero.png: generated illustrative hero image (if included)
 
 IMPORTANT: This is a starter/demo website. Replace every placeholder before publishing:
-- YOUR HOTEL NAME
+- Sugam Hotels and Stays (update if your registered business name differs)
 - +91 XXXXX XXXXX and +91XXXXXXXXXX
 - hotel@example.com in index.html and script.js
 - Hotel address, city, maps link, WhatsApp number
