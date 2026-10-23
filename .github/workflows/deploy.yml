@@ -1,0 +1,46 @@
+
+name: Hotel Website CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate website files
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f script.js
+          test -f Dockerfile
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+            cd /home/ubuntu/app/hotelfor
+            git pull --ff-only origin main
+            sudo docker build -t hotel-website .
+            sudo docker rm -f hotel-website || true
+            sudo docker run -d \
+              --name hotel-website \
+              --restart unless-stopped \
+              -p 127.0.0.1:8080:80 \
+              hotel-website
+            sleep 3
+            curl --fail http://127.0.0.1:8080/
