@@ -32,3 +32,13 @@ Deploy on AWS:
 4. Create a CloudFront distribution with the S3 bucket as origin and default root object `index.html`.
 5. For a custom domain, configure DNS and an ACM certificate in the required CloudFront region.
 6. Test mobile layout, all contact links, form email destination, policy pages and HTTPS before sharing.
+
+# GitHub Practice Project
+
+This project demonstrates the Git and GitHub workflow.
+
+## Features
+- Git version control
+- Feature branch development
+- Pull Request code review
+- Merge changes into main
